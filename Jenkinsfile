@@ -6,7 +6,8 @@ pipeline {
       steps {
         container('nodejs') {
           echo 'Hello World'
-          echo '$(uname -a)'
+          echo "$(uname -a)"
+          sh 'uname -a'
           sh 'java -version'
           sh 'uname -a'
         }
