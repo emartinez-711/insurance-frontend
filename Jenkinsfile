@@ -7,6 +7,8 @@ pipeline {
       steps {
         echo 'Hello World!'   
         sh 'java -version'
+        sh 'uname -a'
+        sh 'pwd'        
       }
     }
     
@@ -15,7 +17,6 @@ pipeline {
       steps {
         container('nodejs') {
           echo "Hello World, using echo and not sh echo"
-          pwd
           sh 'uname -a'
           sh 'pwd'
         }
