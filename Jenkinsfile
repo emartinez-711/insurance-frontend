@@ -5,11 +5,9 @@ pipeline {
       agent { label 'nodejs-app'}
       steps {
         container('nodejs') {
-          echo 'Hello World'
-          echo "$(uname -a)"
+          echo "Hello World"
           sh 'uname -a'
           sh 'java -version'
-          sh 'uname -a'
         }
       }
     }
