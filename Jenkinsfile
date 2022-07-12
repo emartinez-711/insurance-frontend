@@ -2,7 +2,7 @@ pipeline {
   agent none
   stages {
 
-    stage('Say Hello from default container') {
+    stage('Default Container') {
     agent { label 'nodejs-app' }      
       steps {
         echo 'Hello World!'   
